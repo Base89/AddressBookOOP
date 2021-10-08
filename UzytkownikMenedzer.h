@@ -22,6 +22,7 @@ class UzytkownikMenedzer
     PlikZUzytkownikami plikZUzytkownikami;
 
 public:
+    void wczytajUzytkownikowZPliku();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };
