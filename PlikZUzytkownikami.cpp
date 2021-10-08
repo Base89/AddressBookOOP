@@ -51,14 +51,15 @@ string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowym
 vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
 {
     Uzytkownik uzytkownik;
-
+    vector <Uzytkownik> uzytkownicy;
+    string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
     plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::in);
 
     if (plikTekstowy.good() == true)
     {
         while (getline(plikTekstowy, daneJednegoUzytkownikaOddzielonePionowymiKreskami))
         {
-            uzytkownicy.push_back(pobierzDaneUzytkownika());
+            uzytkownicy.push_back(pobierzDaneUzytkownika(daneJednegoUzytkownikaOddzielonePionowymiKreskami));
         }
 
     }
@@ -68,7 +69,7 @@ vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
     return uzytkownicy;
 }
 
-Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika()
+Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami)
 {
     Uzytkownik uzytkownik;
     string pojedynczaDanaUzytkownika = "";
