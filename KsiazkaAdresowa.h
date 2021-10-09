@@ -2,14 +2,19 @@
 #define KSIAZKAADRESOWA_H
 #include <iostream>
 #include "UzytkownikMenedzer.h"
+#include "PlikZUzytkownikami.h"
 
 using namespace std;
 
 class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
+
 public:
-    KsiazkaAdresowa();
+    KsiazkaAdresowa(string NAZWAPLIKUZUZYTKOWNIKAMI) : uzytkownikMenedzer(NAZWAPLIKUZUZYTKOWNIKAMI)
+    {
+        uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+    };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };
