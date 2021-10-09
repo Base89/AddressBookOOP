@@ -2,7 +2,4 @@
 2|init|nolimit|
 3|leslaw|haslonowe|
 4|radek|milosnikzwierzat|
-5|ernest|agrest|
-6|kania|dziewczynak|
-7|antek|marcopolo|
-8|brak|brak|
+5|ernest|wpolu|

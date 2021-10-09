@@ -9,6 +9,7 @@ using namespace std;
 class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
+    int idZalogowanegoUzytkownika;
 
 public:
     KsiazkaAdresowa(string NAZWAPLIKUZUZYTKOWNIKAMI) : uzytkownikMenedzer(NAZWAPLIKUZUZYTKOWNIKAMI)
@@ -17,7 +18,9 @@ public:
     };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    int logowanieUzytkownika();
+    void logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    void wylogowanieUzytkownika();
 };
 
 #endif
