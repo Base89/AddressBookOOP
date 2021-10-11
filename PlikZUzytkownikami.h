@@ -1,5 +1,6 @@
 #ifndef PLIKZUZYTKOWNIKAMI_H
 #define PLIKZUZYTKOWNIKAMI_H
+
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -19,6 +20,7 @@ class PlikZUzytkownikami
 
 public:
     PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {}
+    PlikZUzytkownikami();
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     vector <Uzytkownik> wczytajUzytkownikowZPliku();
     void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
