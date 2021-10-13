@@ -33,5 +33,4 @@ public:
     string pobierzAdres();
 };
 
-
 #endif

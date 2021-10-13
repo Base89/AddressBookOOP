@@ -8,21 +8,27 @@
 #include <sstream>
 
 #include "Adresat.h"
-#include "PlikZUzytkownikami.h"
+#include "PlikZAdresatami.h"
 #include "MetodyPomocnicze.h"
-#include "UzytkownikMenedzer.h"
 
 using namespace std;
 
 class AdresatMenedzer
 {
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     vector <Adresat> adresaci;
-    int idOstatniegoAdresata;
+    PlikZAdresatami plikZAdresatami;
+
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
 
 public:
-    int dodajAdresata();
+    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
+        : plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
+    {
+        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    };
+    void dodajAdresata();
     void wyswietlWszystkichAdresatow();
 };
 
