@@ -107,3 +107,16 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
         system("pause");
     }
 }
+
+void KsiazkaAdresowa::usunAdresata()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer -> usunAdresata();
+    }
+    else
+    {
+        cout << "Aby dodac adresata, nalezy sie zalogowac" << endl;
+        system("pause");
+    }
+}
