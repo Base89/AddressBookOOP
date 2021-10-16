@@ -219,7 +219,6 @@ void PlikZAdresatami::edytujAdresataWPliku(Adresat adresat)
                 else if (numerWczytanejLinii > 1)
                     tymczasowyPlikTekstowy << endl << wczytanaLinia;
             }
-
             numerWczytanejLinii++;
         }
     }
