@@ -133,3 +133,16 @@ void KsiazkaAdresowa::edytujAdresata()
         system("pause");
     }
 }
+
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer -> wyszukajAdresatowPoImieniu();
+    }
+    else
+    {
+        cout << "Aby wyszukiwac adresata, nalezy sie zalogowac" << endl;
+        system("pause");
+    }
+}
