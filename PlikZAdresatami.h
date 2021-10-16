@@ -31,6 +31,7 @@ public:
     bool dopiszAdresataDoPliku(Adresat adresat);
     int pobierzIdOstatniegoAdresata();
     void usunWybranegoAdresataZPliku(int idUsuwanegoAdresata);
+    void edytujAdresataWPliku(Adresat adresat);
 };
 
 #endif
