@@ -50,7 +50,6 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 
 void KsiazkaAdresowa::rejestracjaUzytkownika()
 {
-    cout << endl << "Rejestracja" << endl;
     uzytkownikMenedzer.rejestracjaUzytkownika();
 }
 
@@ -61,7 +60,6 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
-    cout << endl << "Logowanie" << endl;
     uzytkownikMenedzer.logowanieUzytkownika();
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
     {
@@ -71,7 +69,6 @@ void KsiazkaAdresowa::logowanieUzytkownika()
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 {
-    cout << endl << "Zmiana hasla" << endl;
     uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
 }
 

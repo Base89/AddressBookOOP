@@ -1,7 +1,0 @@
-1|1|Ireneusz|Dear|500 100 000|id@cieszyn.com|Poland|
-2|1|Mario|Gomez|800 000 000|mg@mario.de|Germany|
-3|1|Luis|Nazario de lima ronaldo|700 777 000|ronaldo@ronny.br|Rio de Janeiro|
-4|2|Joseph|Ratzinger|none|benedictus@rex.va|Roma|
-5|2|Jorge|Bergoglio|900 000 000|franciscus@papa.va|Roma|
-6|1|Julio|Cesar|700 000 000|jc@cesar.br|Brazil|
-7|2|Nelson|Mandela|777 000 999|nm@peace.za|Johannesburg|
