@@ -83,7 +83,6 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 void AdresatMenedzer::usunAdresata()
 {
     int idUsuwanegoAdresata = 0;
-    int numerLiniiUsuwanegoAdresata = 0;
 
     system("cls");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
@@ -105,11 +104,13 @@ void AdresatMenedzer::usunAdresata()
                 adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal usuniety" << endl << endl;
                 system("pause");
+                return;
             }
             else
             {
                 cout << endl << endl << "Wybrany adresat nie zostal usuniety" << endl << endl;
                 system("pause");
+                return;
             }
         }
     }
@@ -117,6 +118,7 @@ void AdresatMenedzer::usunAdresata()
     {
         cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
         system("pause");
+        return;
     }
 }
 
@@ -125,8 +127,6 @@ void AdresatMenedzer::edytujAdresata()
     system("cls");
     Adresat adresat;
     int idEdytowanegoAdresata = 0;
-    int numerLiniiEdytowanegoAdresata = 0;
-    string liniaZDanymiAdresata = "";
 
     cout << ">>> EDYCJA WYBRANEGO ADRESATA <<<" << endl << endl;
     idEdytowanegoAdresata = podajIdWybranegoAdresata();
@@ -184,6 +184,7 @@ void AdresatMenedzer::edytujAdresata()
         cout << endl << "Nie ma takiego adresata." << endl << endl;
     }
     system("pause");
+    return;
 }
 
 char AdresatMenedzer::wybierzOpcjeZMenuEdycja()
@@ -250,6 +251,7 @@ void AdresatMenedzer::wyszukajAdresatowPoImieniu()
     }
     cout << endl;
     system("pause");
+    return;
 }
 
 void AdresatMenedzer::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow)
@@ -290,4 +292,5 @@ void AdresatMenedzer::wyszukajAdresatowPoNazwisku()
     }
     cout << endl;
     system("pause");
+    return;
 }
