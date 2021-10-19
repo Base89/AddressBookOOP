@@ -144,6 +144,9 @@ void PlikZAdresatami::usunWybranegoAdresataZPliku(int idUsuwanegoAdresata)
     fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
     string nazwaTymczasowegoPlikuZAdresatami = "Adresaci_tymczasowo.txt";
     string wczytanaLinia = "";
+    string daneOstaniegoAdresataWPliku = "";
+    string daneJednegoAdresataOddzielonePionowymiKreskami = "";
+    string daneUsuwanegoAdresata = "";
     int numerWczytanejLinii = 1;
 
     odczytywanyPlikTekstowy.open(pobierzNazwePliku().c_str(), ios::in);
@@ -157,11 +160,29 @@ void PlikZAdresatami::usunWybranegoAdresataZPliku(int idUsuwanegoAdresata)
             else
             {
                 if (numerWczytanejLinii == 1)
+                {
                     tymczasowyPlikTekstowy << wczytanaLinia;
+                    daneJednegoAdresataOddzielonePionowymiKreskami = wczytanaLinia;
+                }
+
                 else if (numerWczytanejLinii > 1)
+                {
                     tymczasowyPlikTekstowy << endl << wczytanaLinia;
+                    daneJednegoAdresataOddzielonePionowymiKreskami = wczytanaLinia;
+                }
+
             }
             numerWczytanejLinii++;
+        }
+    }
+
+    if (idUsuwanegoAdresata == idOstatniegoAdresata)
+    {
+        daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
+
+        if (daneOstaniegoAdresataWPliku != "")
+        {
+            idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
         }
     }
     odczytywanyPlikTekstowy.close();
