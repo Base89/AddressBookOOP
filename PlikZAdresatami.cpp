@@ -146,7 +146,6 @@ void PlikZAdresatami::usunWybranegoAdresataZPliku(int idUsuwanegoAdresata)
     string wczytanaLinia = "";
     string daneOstaniegoAdresataWPliku = "";
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
-    string daneUsuwanegoAdresata = "";
     int numerWczytanejLinii = 1;
 
     odczytywanyPlikTekstowy.open(pobierzNazwePliku().c_str(), ios::in);
