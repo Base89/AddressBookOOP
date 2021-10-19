@@ -110,7 +110,6 @@ void AdresatMenedzer::usunAdresata()
             {
                 cout << endl << endl << "Wybrany adresat nie zostal usuniety" << endl << endl;
                 system("pause");
-                return;
             }
         }
     }
@@ -118,7 +117,6 @@ void AdresatMenedzer::usunAdresata()
     {
         cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
         system("pause");
-        return;
     }
 }
 
@@ -184,7 +182,6 @@ void AdresatMenedzer::edytujAdresata()
         cout << endl << "Nie ma takiego adresata." << endl << endl;
     }
     system("pause");
-    return;
 }
 
 char AdresatMenedzer::wybierzOpcjeZMenuEdycja()
